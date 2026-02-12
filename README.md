@@ -188,11 +188,4 @@ Register as a new user.
 
 ---
 
-## 📄 License
 
-This project is for educational purposes.
-
----
-
-If you want, I can also create a **more professional industry-level README** with badges and GitHub styling for better impression on recruiters 🚀
-# tech-quiz
