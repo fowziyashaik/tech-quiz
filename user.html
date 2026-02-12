@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Quiz Application</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #007BFF;
+      --secondary: #00C9A7;
+      --accent: #1E90FF;
+      --light-bg: #F5FAFF;
+      --navbar-gradient: linear-gradient(135deg, #007BFF, #00C9A7, #1E90FF);
+      --blue: #007BFF;
+      --blue-dark: #0056b3;
+    }
+
+    body {
+      background: var(--light-bg);
+      color: #03396C;
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Header */
+    header {
+      background: var(--navbar-gradient);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+    }
+    header h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    /* ✨ Enhanced Navbar */
+    .navbar {
+      background: var(--navbar-gradient);
+      background-size: 300% 300%;
+      animation: gradientShift 6s ease infinite;
+      box-shadow: 0 4px 20px rgba(0, 123, 255, 0.25);
+      border-radius: 50px;
+      margin: 20px auto;
+      width: 95%;
+      padding: 0.5rem 1.5rem;
+      position: relative;
+      z-index: 10;
+      transition: all 0.4s ease;
+    }
+
+    .navbar:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 30px rgba(0, 123, 255, 0.35);
+    }
+
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .navbar-brand {
+      color: #fff !important;
+      font-size: 1.3rem;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .navbar-brand:hover {
+      color: #dff6ff !important;
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+      border-radius: 25px;
+      padding: 8px 15px !important;
+      transition: all 0.3s ease;
+    }
+
+    .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      color: #fff !important;
+      transform: translateY(-2px);
+    }
+
+    .navbar-toggler {
+      border-color: rgba(255, 255, 255, 0.7);
+    }
+
+    /* Main Home Section */
+    .home-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 60px 20px;
+    }
+
+    .home-card {
+      background: #fff;
+      padding: 50px 40px;
+      border-radius: 20px;
+      box-shadow: 0 10px 30px rgba(13,110,253,0.15);
+      max-width: 700px;
+      width: 100%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeIn 0.7s ease-in;
+    }
+    .home-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 35px rgba(13,110,253,0.25);
+    }
+    .home-card h2 {
+      font-weight: 700;
+      color: var(--blue-dark);
+      margin-bottom: 20px;
+    }
+    .home-card p {
+      color: #4b5563;
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+
+    /* Start Button */
+    .start-btn {
+      background: var(--blue);
+      color: #fff;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 14px 40px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .start-btn:hover {
+      background: var(--blue-dark);
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--navbar-gradient);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+      margin-top: 40px;
+    }
+    footer h5 {
+      margin: 0;
+      font-weight: 400;
+      letter-spacing: 0.5px;
+    }
+    footer span {
+      color: #E0FFFF;
+      font-weight: 600;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <h1><i class="fa-solid fa-graduation-cap me-2"></i> TECH QUIZ </h1>
+  </header>
+
+  <!-- ✨ ENHANCED NAVBAR -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-house"></i> Home</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#quizNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="quizNav">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link active" href="login.jsp">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="viewprofile.jsp" target="aframe">View Profile</a></li>
+          <li class="nav-item"><a class="nav-link" href="exam.jsp" target="aframe">Write Exam</a></li>
+          <li class="nav-item"><a class="nav-link" href="chart.jsp" target="aframe">Pie Chart</a></li>
+          <li class="nav-item"><a class="nav-link" href="changepswrd.jsp" target="aframe">Change Password</a></li>
+          <li class="nav-item"><a class="nav-link" href="logout.jsp">Logout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Home Content -->
+  <section class="home-section">
+    <div class="home-card">
+      <h2>Welcome to Tech Quiz</h2>
+      <p>
+        Test your technical knowledge, improve your skills,  
+        and track your performance with real-time analytics and reports.
+      </p>
+
+      <!-- Start Quiz Button -->
+      <a href="exam.jsp" class="start-btn">
+        <i class="fa fa-play"></i> START QUIZ
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <h5>© 2026 All Rights Reserved | <span> TECH QUIZ</span></h5>
+    <div class="mt-2">
+      📧 <a href="mailto:fowziyashaik@gmail.com" class="text-white text-decoration-none">fowziyashaik@gmail.com</a> |
+      <a href="https://github.com/fowziyashaik" target="_blank" class="text-white text-decoration-none">
+        <i class="fab fa-github"></i> GitHub
+      </a> |
+      <a href="https://www.linkedin.com/in/fowziyashaik" target="_blank" class="text-white text-decoration-none">
+        <i class="fab fa-linkedin"></i> LinkedIn
+      </a>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

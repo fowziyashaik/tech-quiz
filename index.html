@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tech Discussion Forum</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" rel="stylesheet">
+
+  <style>
+    :root {
+      --primary: #007BFF;         /* Deep blue */
+      --secondary: #00C9A7;       /* Teal cyan */
+      --accent: #1E90FF;          /* Electric blue */
+      --dark-bg: #0B132B;
+      --light-text: #EAF4FF;
+      --gradient: linear-gradient(135deg, var(--primary), var(--secondary));
+    }
+
+    body {
+      background: var(--dark-bg);
+      color: var(--light-text);
+      font-family: 'Inter', sans-serif;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    .navbar {
+      background: linear-gradient(90deg, var(--primary), var(--secondary), var(--accent));
+      background-size: 300% 300%;
+      animation: gradientFlow 6s ease infinite;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.4);
+    }
+    @keyframes gradientFlow {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .navbar-brand {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      color: #fff;
+    }
+    .nav-link { color: #fff !important; transition: 0.3s; }
+    .nav-link:hover { color: var(--accent) !important; }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      background: radial-gradient(circle at 10% 10%, rgba(0,123,255,0.9), rgba(0,201,167,0.7), rgba(0,255,255,0.1));
+      padding: 5rem 1.5rem;
+      border-bottom-left-radius: 80px;
+      border-bottom-right-radius: 80px;
+      box-shadow: 0 10px 35px rgba(0,0,0,0.4);
+      animation: fadeIn 1.2s ease-out;
+    }
+    .hero h1 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+      letter-spacing: 1px;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+    }
+    .hero p {
+      color: #d8ecff;
+      margin-top: 0.5rem;
+      margin-bottom: 1.5rem;
+      opacity: 0.9;
+      font-size: 1.1rem;
+    }
+
+    /* Buttons */
+    .btn-glow {
+      background: var(--gradient);
+      color: #fff;
+      border: none;
+      font-weight: 600;
+      border-radius: 30px;
+      box-shadow: 0 0 15px rgba(0,123,255,0.5);
+      transition: all 0.3s ease;
+    }
+    .btn-glow:hover {
+      box-shadow: 0 0 25px rgba(0,123,255,0.9);
+      transform: translateY(-3px) scale(1.05);
+    }
+
+    .btn-outline-glow {
+      color: #fff;
+      border: 2px solid #fff;
+      border-radius: 30px;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    .btn-outline-glow:hover {
+      background: #fff;
+      color: var(--primary);
+      transform: translateY(-3px);
+    }
+
+    /* Feature Cards */
+    .feature-card {
+      position: relative;
+      background: rgba(255,255,255,0.05);
+      border-radius: 20px;
+      border: 1px solid rgba(255,255,255,0.1);
+      backdrop-filter: blur(10px);
+      text-align: center;
+      padding: 2rem 1.5rem;
+      transition: all 0.4s ease;
+      overflow: hidden;
+    }
+    .feature-card::before {
+      content: "";
+      position: absolute;
+      top: -2px; left: -2px;
+      width: calc(100% + 4px);
+      height: calc(100% + 4px);
+      background: linear-gradient(45deg, var(--primary), var(--secondary), var(--accent), var(--primary));
+      background-size: 400% 400%;
+      z-index: -1;
+      border-radius: 20px;
+      opacity: 0;
+      transition: 0.4s;
+      filter: blur(6px);
+    }
+    .feature-card:hover::before {
+      opacity: 1;
+      animation: glowMove 3s linear infinite;
+    }
+    @keyframes glowMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px) scale(1.03);
+      box-shadow: 0 0 25px rgba(0,123,255,0.4);
+    }
+
+    .feature-card i {
+      font-size: 2.2rem;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.8rem;
+      animation: floatIcon 3s ease-in-out infinite;
+    }
+
+    @keyframes floatIcon {
+      0%, 100% { transform: translateY(0px); }
+      50% { transform: translateY(-8px); }
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255,255,255,0.1);
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 0.5rem;
+      transition: color 0.3s ease;
+    }
+    footer a:hover { color: var(--accent); }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><i class="fa-solid fa-comments me-2"></i>Tech Discussion Forum</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="userreg.jsp" target="_blank">Register</a></li>
+          <li class="nav-item"><a class="nav-link" href="login.jsp" target="_blank">Login</a></li>
+          <li class="nav-item"><a class="nav-link" href="contactus.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="devolopers.html">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="home">
+    <div class="container">
+      <h1>Connect. Learn. Innovate.</h1>
+      <p>Join a global tech community — share code, discuss trends, and grow together.</p>
+      <div class="d-flex justify-content-center gap-3 flex-wrap">
+        <a href="userreg.jsp" target="_blank" class="btn btn-glow btn-lg"><i class="fa-regular fa-pen-to-square me-2"></i>Register</a>
+        <a href="login.jsp" target="_blank" class="btn btn-outline-glow btn-lg"><i class="fa-solid fa-right-to-bracket me-2"></i>Login</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <main class="container my-5">
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fa-solid fa-comments"></i>
+          <h5>Interactive Discussions</h5>
+          <p>Start or join conversations, explore threads, and connect with tech enthusiasts globally.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fa-solid fa-star"></i>
+          <h5>Upvotes & Recognition</h5>
+          <p>Earn badges and reputation as your contributions are recognized by the community.</p>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="feature-card">
+          <i class="fa-solid fa-lock"></i>
+          <h5>Secure Access</h5>
+          <p>Enjoy encrypted authentication, safe data handling, and a reliable forum experience.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+</body>
+</html>

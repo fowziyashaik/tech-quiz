@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tech Quiz System Overview</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+    <style>
+        :root {
+            --primary: #007BFF;
+            --secondary: #00C9A7;
+            --accent: #1E90FF;
+        }
+
+        body {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            min-height: 100vh;
+            padding-top: 60px;
+        }
+
+        .section-title {
+            text-align: center;
+            color: white;
+            font-size: 35px;
+            font-weight: bold;
+            margin-bottom: 40px;
+        }
+
+        .card-custom {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.4s ease;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            cursor: pointer;
+            margin-bottom: 30px;
+            min-height: 200px;
+        }
+
+        .card-custom h3 {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        .card-custom p {
+            color: #555;
+            font-size: 14px;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-10px) scale(1.05);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            background: linear-gradient(135deg, var(--accent), var(--secondary));
+            color: white;
+        }
+
+        .card-custom:hover h3,
+        .card-custom:hover p {
+            color: white;
+        }
+
+        .icon-box {
+            font-size: 40px;
+            color: var(--accent);
+            margin-bottom: 15px;
+            transition: 0.4s;
+        }
+
+        .card-custom:hover .icon-box {
+            color: white;
+            transform: rotate(10deg) scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="section-title">Tech Quiz Application Overview</div>
+
+    <div class="row">
+
+        <!-- Java -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fab fa-java"></i>
+                </div>
+                <h3>Java Backend</h3>
+                <p>Core logic, score calculation and server-side processing using Java.</p>
+            </div>
+        </div>
+
+        <!-- JSP -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-file-code"></i>
+                </div>
+                <h3>JSP Pages</h3>
+                <p>Dynamic web pages for login, exam, result and admin modules.</p>
+            </div>
+        </div>
+
+        <!-- Tomcat -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-server"></i>
+                </div>
+                <h3>Apache Tomcat</h3>
+                <p>Server used to deploy and run the Tech Quiz application.</p>
+            </div>
+        </div>
+
+        <!-- WAMP -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3>WAMP / MySQL</h3>
+                <p>Database used to store users, questions, results and login data.</p>
+            </div>
+        </div>
+
+        <!-- Frontend -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3>HTML, CSS, JS</h3>
+                <p>Frontend design, validation, animations and responsive layout.</p>
+            </div>
+        </div>
+
+        <!-- Users -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3>User Module</h3>
+                <p>Users can register, login, attend quiz and view results instantly.</p>
+            </div>
+        </div>
+
+        <!-- Login System -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-sign-in-alt"></i>
+                </div>
+                <h3>Login System</h3>
+                <p>Secure admin and user login authentication system.</p>
+            </div>
+        </div>
+
+        <!-- Admin -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-user-shield"></i>
+                </div>
+                <h3>Admin Panel</h3>
+                <p>Admin can add questions, manage users and monitor quiz results.</p>
+            </div>
+        </div>
+
+        <!-- Result -->
+        <div class="col-sm-4">
+            <div class="card-custom">
+                <div class="icon-box">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Instant Results</h3>
+                <p>Automatic score calculation and performance evaluation.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="https://use.fontawesome.com/releases/v5.6.3/js/all.js"></script>
+
+</body>
+</html>
