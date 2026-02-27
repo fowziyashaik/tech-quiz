@@ -173,11 +173,8 @@ Register as a new user.
 
 ---
 
-## 📸 Screenshots
 
-(Add your project screenshots here)
 
----
 
 ## 👩‍💻 Developed By
 
